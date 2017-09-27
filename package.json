@@ -4,9 +4,9 @@
   "description": "Minimalistic ES6 React boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --config webpack.config.babel.js",
     "clean": "rimraf dist",
-    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "production": "cross-env npm run clean && webpack --config webpack.production.config.babel.js --progress --profile --colors",
     "lint": "eslint ./app/**/**.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -30,7 +30,7 @@
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-hot-loader": "3.0.0-beta.6",
-    "react-router-dom": "4.2.0"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -49,7 +49,7 @@
     "eslint-config-airbnb": "15.1.0",
     "eslint-loader": "1.8.0",
     "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-jsx-a11y": "5.1.0",
+    "eslint-plugin-jsx-a11y": "^5.1.0",
     "eslint-plugin-react": "7.2.0",
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "0.11.2",
